@@ -14,8 +14,12 @@ case "$1" in
   (*) usage ;;
 esac
 
+basedir=$(dirname "$0")
+mkdir -p $basedir/preprod
+mkdir -p $basedir/prod
+
 filename=$(date +"%Y-%m-%d_%H-%M-%S")
 filename_relative_path=$1/$filename
-touch $filename_relative_path
-git add $filename_relative_path
-git commit -m "Autogenerating release metadata $filename_relative_path"
+touch $basedir/$filename_relative_path
+git -C $basedir add $filename_relative_path
+git -C $basedir commit -m "Autogenerating release metadata $filename_relative_path"
