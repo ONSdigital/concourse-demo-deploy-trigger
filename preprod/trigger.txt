@@ -1,4 +1,0 @@
-First deploy
-second deploy
-third commit
-23/04/18 - 1
