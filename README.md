@@ -1,4 +1,9 @@
-# concourse-demo-deploy-trigger
+# Deployment Trigger for the [Concourse Demo Pipeline](https://github.com/ONSdigital/concourse-demo-pipeline)
+
+For more details on the pipeline, please see the [main repository](https://github.com/ONSdigital/concourse-demo-pipeline).
+
+## Triggering a deployment
+
 Deployments to preprod and prod require manual approval. This repository is used to trigger deployments to preprod and prod.
 
 Triggering a preprod release
@@ -12,3 +17,4 @@ Triggering a prod release
 ./release.sh prod
 git push origin master
 ```
+
